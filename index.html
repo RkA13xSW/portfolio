@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CodeChef</title>
+        <link rel="icon" type="image/png" href="./ICONS/pcIcon.png">
+
+        <link rel="stylesheet" href="./LIBS/BootstrapV5/bootstrap.min.css">
+        <script src="./LIBS/BootstrapV5/bootstrap.bundle.min.js"></script>
+
+        <link rel="stylesheet" href="./CSS/main.css">
+        <script src="./JS/main.js"></script>
+    </head>
+    <body onload="finalizacionCarga()">
+        
+        <!-- !PANTALLA DE CARGA -->
+        <div  class="loadingScreen ver" id="loadingScreen">
+            <div class="loadingLogo text-center">
+                <img src="./IMAGES/IconoPersonal.png" alt="LogoCarga">
+                <h3 id="fraseCargando">Cargando</h3>
+                <p id="frasesCarga">El 52% del tráfico de todo Internet es creado por Bots.</p>
+            </div>
+        </div>
+        <!-- !PANTALLA DE CARGA -->
+
+        <!-- !PANTALLA INICIO SESIÓN -->
+        <div class="logginScreen ver" id="logginScreen">
+            <div class="loggin d-flex justify-content-center align-items-center">
+                <div id="logginForm">
+                    <label for="name">Usuario</label>
+                    <input oninput="guardarNombre()" type="text" name="name" id="nameLoggin" required>
+                    <input onclick="cambiarVisibilidad('logginScreen'); entradaLateral('ventanaBienvenida');" disabled type="button" value="Entrar" id="buttonLoggin">
+                </div>
+            </div>
+        </div>
+        <!-- !PANTALLA INICIO SESIÓN -->
+
+        <!-- !VENTANA DE BIENVENIDA -->
+        <div class="ventanaBienvenida noVer" id="ventanaBienvenida">
+            <div class="barraSuperiorVentana" id="barraSuperiorVentana">
+                <span><img src="./ICONS/docIcon.png" alt="doc"> bienvenida.txt</span>
+                <div class="botonCerrarVentana" onclick="cerrarVentana('ventanaBienvenida')">
+                    <img src="./ICONS/closeIcon.png" alt="Cerrar">
+                </div>
+            </div>
+            <div class="ventanaContenido">
+                <textarea name="saludo" id="saludo"></textarea>
+            </div>
+        </div>
+        <!-- !VENTANA DE BIENVENIDA -->
+
+        <!-- !VENTANA SISTEMA -->
+        <div class="ventanaSistema noVer" id="ventanaSistema">
+            <div class="lateralAccesosSistema">
+                <div class="apagarSistema">
+                    <img src="./ICONS/apagarIcon.png" alt="Apagar">
+                </div>
+            </div>
+
+            <div class="aplicacionesSistema">
+                <div class="aplicacionSis">
+                    <img src="./ICONS/htmlIcon.png" alt="HTML">
+                    <p>HTML</p>
+                </div>
+
+                <div class="aplicacionSis">
+                    <img src="./ICONS/cssIcon.png" alt="CSS">
+                    <p>CSS</p>
+                </div>
+
+                <div class="aplicacionSis">
+                    <img src="./ICONS/jsIcon.png" alt="JS">
+                    <p>JavaScript</p>
+                </div>
+
+                <div class="aplicacionSis">
+                    <img src="./ICONS/bootstrapIcon.png" alt="Bootstrap">
+                    <p>Bootstrap V5</p>
+                </div>
+
+                <div class="aplicacionSis">
+                    <img src="./ICONS/typescriptIcon.png" alt="TS">
+                    <p>Typescript</p>
+                </div>
+
+                <div class="aplicacionSis">
+                    <img src="./ICONS/java2Icon.png" alt="Java">
+                    <p>Java</p>
+                </div>
+
+                <div class="aplicacionSis">
+                    <img src="./ICONS/sqlIcon.png" alt="SQL">
+                    <p>SQL Database</p>
+                </div>
+
+                <div class="aplicacionSis">
+                    <img src="./ICONS/mysqlIcon.png" alt="MySQL">
+                    <p>MySQL Database</p>
+                </div>
+                
+                <div class="aplicacionSis">
+                    <img src="./ICONS/fabricjsIcon.png" alt="FabricJS">
+                    <p>FabricJS Library</p>
+                </div>
+
+                <div class="aplicacionSis">
+                    <img src="./ICONS/discordjsIcon.png" alt="DiscordJS">
+                    <p>DiscordJS</p>
+                </div>
+
+                <div class="aplicacionSis">
+                    <img src="./ICONS/nodeIcon.png" alt="NodeJS">
+                    <p>NodeJS</p>
+                </div>
+
+                <div class="aplicacionSis">
+                    <img src="./ICONS/angularIcon.png" alt="Angular">
+                    <p>Angular</p>
+                </div>
+
+                <div class="aplicacionSis">
+                    <img src="./ICONS/gitIcon.png" alt="Git">
+                    <p>Git Bach</p>
+                </div>
+
+                <div class="aplicacionSis">
+                    <img src="./ICONS/githubIcon.png" alt="GitHub">
+                    <p>GitHub Desktop</p>
+                </div>
+
+                <div class="aplicacionSis">
+                    <img src="./ICONS/junitIcon.png" alt="Junit">
+                    <p>JUnit UnitTest</p>
+                </div>
+
+                <div class="aplicacionSis">
+                    <img src="./ICONS/springbootIcon.png" alt="SpringBoot">
+                    <p>Spring Boot</p>
+                </div>
+
+                <div class="aplicacionSis">
+                    <img src="./ICONS/lombokIcon.png" alt="Lombok">
+                    <p>Lombok</p>
+                </div>
+
+                <div class="aplicacionSis">
+                    <img src="./ICONS/mockitoIcon.png" alt="Mockito">
+                    <p>Mockito UnitTest</p>
+                </div>
+
+                <div class="aplicacionSis">
+                    <img src="./ICONS/hibernateIcon.png" alt="Hibernate">
+                    <p>Hibernate</p>
+                </div>
+
+                <div class="aplicacionSis">
+                    <img src="./ICONS/jpaIcon.png" alt="JPA">
+                    <p>Java Persistance API</p>
+                </div>
+
+                <div class="aplicacionSis">
+                    <img src="./ICONS/gitIcon.png" alt="Git">
+                    <p>Git Bach</p>
+                </div>
+
+                <div class="aplicacionSis">
+                    <img src="./ICONS/postmanIcon.png" alt="Postman">
+                    <p>Postman</p>
+                </div>
+
+                <div class="aplicacionSis">
+                    <img src="./ICONS/virtualboxIcon.png" alt="virtualbox">
+                    <p>Oracle VirtualBox</p>
+                </div>
+
+                <div class="aplicacionSis">
+                    <img src="./ICONS/eclipseIcon.png" alt="Eclipse">
+                    <p>Eclipse IDE</p>
+                </div>
+
+                <div class="aplicacionSis">
+                    <img src="./ICONS/netbeansIcon.png" alt="NetBeans">
+                    <p>NetBeans IDE</p>
+                </div>
+
+                <div class="aplicacionSis">
+                    <img src="./ICONS/visualIcon.png" alt="VisualStudio">
+                    <p>Visual Studio IDE</p>
+                </div>
+
+                <div class="aplicacionSis">
+                    <img src="./ICONS/xmlIcon.png" alt="XML">
+                    <p>XML</p>
+                </div>
+
+                <div class="aplicacionSis">
+                    <img src="./ICONS/xsdIcon.png" alt="XSD">
+                    <p>XML Schema</p>
+                </div>
+
+                <div class="aplicacionSis">
+                    <img src="./ICONS/xslIcon.png" alt="XSL">
+                    <p>Extensible Stylesheet Lang</p>
+                </div>
+
+                <div class="aplicacionSis">
+                    <img src="./ICONS/windowsIcon.png" alt="Windows">
+                    <p>Windows CMD</p>
+                </div>
+
+                <div class="aplicacionSis">
+                    <img src="./ICONS/linuxIcon.png" alt="Linux">
+                    <p>Linux Command Line</p>
+                </div>
+
+                <div class="aplicacionSis">
+                    <img src="./ICONS/photoshopIcon.png" alt="PS">
+                    <p>Adobe Photoshop</p>
+                </div>
+
+                <div class="aplicacionSis">
+                    <img src="./ICONS/illustratorIcon.png" alt="Illustrator">
+                    <p>Adobe Illustrator</p>
+                </div>                
+            </div>
+        </div>
+        <!-- !VENTANA SISTEMA -->
+
+        <!-- !ESCRITORO -->
+        <div class="desk" id="desk">
+
+            <!-- !BARRA SUPERIOR -->
+            <div class="top-bar">
+                <div class="top-bar-pcico" id="top-bar-pcico">
+                    <img onclick="entradaSistema()" src="./ICONS/pcIcon.png" alt="IconPc" class="img-responsive">
+                </div>
+                <div class="top-bar-shortcuts">
+                    <img onclick="mostrarAplicacion('ventanaContacto')" src="./ICONS/contactIcon.png" alt="Contact" class="img-responsive">
+                    <img onclick="mostrarAplicacion('ventanaPerfil')" src="./ICONS/profileIcon.png" alt="Profile" class="img-responsive">
+                    <img onclick="mostrarAplicacion('ventanaHelp')" src="./ICONS/helpIcon.png" alt="Help" class="img-responsive">
+
+
+                </div>
+                <div class="top-bar-hora">
+                    <input type="text" name="reloj" id="relojHora" size="10" disabled>
+                </div>
+            </div>
+            <!-- !BARRA SUPERIOR -->
+
+            <!-- !DIR ESCRITORIO -->
+            <div ondblclick="abrirVentana('ventanaPc')" class="desk-icon text-center overflow-hidden" id="home">
+                <img src="./ICONS/computer.png" alt="PC" class="img-responsive">
+                <p class="desk-text text-truncate user-select-none" >Pc Main</p>
+            </div>
+
+            <div ondblclick="abrirVentana('ventanaProyectos')" class="desk-icon text-center overflow-hidden" id="proyectosDir">
+                <img src="./ICONS/folderIcon.png" alt="PC" class="img-responsive">
+                <p class="desk-text text-truncate user-select-none" >Proyectos</p>
+            </div>
+
+            <div ondblclick="abrirVentana('ventanaTech')" class="desk-icon text-center overflow-hidden" id="techDir">
+                <img src="./ICONS/folderIcon.png" alt="PC" class="img-responsive">
+                <p class="desk-text text-truncate user-select-none" >Tech</p>
+            </div>
+            <!-- !DIR ESCRITORIO -->
+
+
+             <!-- TODO: VENTANAS DIRECTORIOS -->
+            <!-- !VENTANA PROYECTOS -->
+            <div class="ventana noVer" id="ventanaProyectos">
+                <div class="barraSuperiorVentana" id="barraSuperiorVentana">
+                    <span><img src="./ICONS/folderIcon.png" alt="dir"> Proyectos</span>
+                    <div class="botonesDerechaVentana">
+                        <div class="btnSupVentana botonMaxVentana" id="maxventanaProyectos" onclick="maximizarVentana('ventanaProyectos')">
+                            <img  src="./ICONS/maximizeIcon.png" alt="Max">
+                        </div>
+                        <div class="btnSupVentana botonMinVentana noVer" id="minventanaProyectos" onclick="minimizarVentana('ventanaProyectos')">
+                            <img  src="./ICONS/minimizeIcon.png" alt="Min">
+                        </div>
+                        <div class="btnSupVentana botonCerrarVentana" onclick="cerrarVentanaDir('ventanaProyectos')">
+                            <img src="./ICONS/closeIcon.png" alt="Cerrar">
+                        </div>
+                    </div>
+                </div>
+                <div class="ventanaInterior">
+                    <div class="ventanaInteriorLateral">
+
+                    </div>
+                    <div class="ventanaInteriorContenido">
+                        <div ondblclick="mostrarAplicacion('ventanaNodens')" class="carpetaVentana text-center overflow-hidden" id="carpetaNodens">
+                            <img src="./ICONS/IconoNodens.png" alt="PC" class="img-responsive">
+                            <p class="desk-text text-truncate user-select-none" >NodensAbyss-Alpha.pdf</p>
+                        </div>
+                        <div ondblclick="mostrarAplicacion('ventanaPizarra')" class="carpetaVentana text-center overflow-hidden" id="carpetaPizarra">
+                            <img src="./ICONS/pizarraIcon.png" alt="PC" class="img-responsive">
+                            <p class="desk-text text-truncate user-select-none" >Pizarra.pdf</p>
+                        </div>
+                        <div  ondblclick="mostrarAplicacion('ventanaBot')" class="carpetaVentana text-center overflow-hidden" id="carpetaBotNodens">
+                            <img src="./ICONS/necroIcon.png" alt="PC" class="img-responsive">
+                            <p class="desk-text text-truncate user-select-none" >NecronomiconBot.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- !VENTANA PROYECTOS -->
+
+            <!-- !VENTANA PC -->
+            <div class="ventana noVer" id="ventanaPc">
+                <div class="barraSuperiorVentana" id="barraSuperiorVentana">
+                    <span><img src="./ICONS/computer.png" alt="dir"> PC</span>
+                    <div class="botonesDerechaVentana">
+                        <div class="btnSupVentana botonMaxVentana" id="maxventanaPc" onclick="maximizarVentana('ventanaPc')">
+                            <img  src="./ICONS/maximizeIcon.png" alt="Max">
+                        </div>
+                        <div class="btnSupVentana botonMinVentana noVer" id="minventanaPc" onclick="minimizarVentana('ventanaPc')">
+                            <img  src="./ICONS/minimizeIcon.png" alt="Min">
+                        </div>
+                        <div class="btnSupVentana botonCerrarVentana" onclick="cerrarVentanaDir('ventanaPc')">
+                            <img src="./ICONS/closeIcon.png" alt="Cerrar">
+                        </div>
+                    </div>
+                </div>
+                <div class="ventanaInterior">
+                    <div class="ventanaInteriorLateral">
+
+                    </div>
+                    <div class="ventanaInteriorContenido">
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- !VENTANA PC -->
+
+            <!-- !VENTANA TECH -->
+            <div class="ventana noVer"  id="ventanaTech">
+                <div class="barraSuperiorVentana" id="barraSuperiorVentana">
+                    <span><img src="./ICONS/folderIcon.png" alt="dir"> Tech</span>
+                    <div class="botonesDerechaVentana">
+                        <div class="btnSupVentana botonMaxVentana" id="maxventanaTech" onclick="maximizarVentana('ventanaTech')">
+                            <img  src="./ICONS/maximizeIcon.png" alt="Max">
+                        </div>
+                        <div class="btnSupVentana botonMinVentana noVer" id="minventanaTech" onclick="minimizarVentana('ventanaTech')">
+                            <img  src="./ICONS/minimizeIcon.png" alt="Min">
+                        </div>
+                        <div class="btnSupVentana botonCerrarVentana" onclick="cerrarVentanaDir('ventanaTech')">
+                            <img src="./ICONS/closeIcon.png" alt="Cerrar">
+                        </div>
+                    </div>
+                </div>
+                <div class="ventanaInterior">
+                    <div class="ventanaInteriorLateral">
+
+                    </div>
+                    <div class="ventanaInteriorContenido">
+
+                        <div class="carpetaVentana text-center overflow-hidden" id="carpetaEstudios">
+                            <img src="./ICONS/estudiosIcon.png" alt="Estudios" class="img-responsive">
+                            <p class="desk-text text-truncate user-select-none" >Estudios.pdf</p>
+                        </div>
+
+                        <div class="carpetaVentana text-center overflow-hidden" id="carpetaTrabajo">
+                            <img src="./ICONS/trabajoIcon.png" alt="Estudios" class="img-responsive">
+                            <p class="desk-text text-truncate user-select-none" >Trabajo.pdf</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- !VENTANA TECH -->
+            <!-- TODO: VENTANAS DIRECTORIOS -->
+
+
+            <!-- TODO: APLICACIONES -->
+
+            <!-- INSERTAR ENLACES: -->
+
+            <!-- !NODENSABYSS PDF -->
+            <div class="ventanaAplicacion noVer" id="ventanaNodens">
+                <div class="barraSuperiorVentana" id="barraSuperiorVentana">
+                    <span><img src="./ICONS/pdfIcon.png" alt="dir"> NodensAbyss-Alpha.pdf</span>
+                    <div class="botonesDerechaVentana">
+                        <div class="btnSupVentana botonCerrarVentana" onclick="cerrarAplicacion('ventanaNodens')">
+                            <img src="./ICONS/closeIcon.png" alt="Cerrar">
+                        </div>
+                    </div>
+                </div>
+                <div class="contenidoVentanaAplicacion">
+                    <h3 class="tituloVentanaAplicacion">NodensAbyss - Alpha</h3>
+                    <div class="textoVentanaAplicacion">
+                        <p>Esta aplicación web busca solucionar la escasez de aplicaciones web no piratas hispano hablantes que existe en la red, ya que la mayoría de herramientas orientadas al rol existentes son incompletas, toscas y/o de pago. 
+                            <br> <br> 
+                           La finalidad es hacer un todo en uno, tener todas las herramientas y utilidades que un jugador de rol pueda necesitar gratuitamente y al alcance de la mano. Además de la posibilidad de compartir legalmente y de forma óptima los recursos creados por uno mismo o crearlos desde la aplicación.
+                            <br> <br>
+                           Por el momento la aplicación sigue en desarrollo, se estima que estará completada la primera versión completamente funcional a mediados de 2023. A continuación se podrán observar algunas funcionalidades de la aplicación y algunos datos técnicos sobre la misma.
+                        </p>
+                    </div>
+
+                    <h3 class="tituloVentanaAplicacion">Técnologías</h3>
+                    <div class="tecnologiasVentanaAplicacion">
+
+                        <div class="tecnologiaVentanaAplicacion">
+                            <img class="img-responsive" src="./ICONS/htmlIcon.png" alt="HTML">
+                            <h6>HTML 5</h6>
+                        </div>
+
+                        <div class="tecnologiaVentanaAplicacion">
+                            <img class="img-responsive" src="./ICONS/cssIcon.png" alt="CSS">
+                            <h6>CSS 3</h6>
+                        </div>
+
+                        <div class="tecnologiaVentanaAplicacion">
+                            <img class="img-responsive" src="./ICONS/bootstrapIcon.png" alt="Bootstrap">
+                            <h6>Bootstrap 5</h6>
+                        </div>
+
+                        <div class="tecnologiaVentanaAplicacion">
+                            <img class="img-responsive" src="./ICONS/jsIcon.png" alt="JS">
+                            <h6>JavaScript</h6>
+                        </div>
+
+                        <div class="tecnologiaVentanaAplicacion">
+                            <img class="img-responsive" src="./ICONS/typescriptIcon.png" alt="TS">
+                            <h6>TypeScript</h6>
+                        </div>
+
+                        <div class="tecnologiaVentanaAplicacion">
+                            <img class="img-responsive" src="./ICONS/angularIcon.png" alt="Angular">
+                            <h6>Angular 13</h6>
+                        </div>
+
+                        <div class="tecnologiaVentanaAplicacion">
+                            <img class="img-responsive" src="./ICONS/java2Icon.png" alt="Java">
+                            <h6>Java 18</h6>
+                        </div>
+
+                        <div class="tecnologiaVentanaAplicacion">
+                            <img class="img-responsive" src="./ICONS/jpaIcon.png" alt="JPA">
+                            <h6>JPA</h6>
+                        </div>
+
+                        <div class="tecnologiaVentanaAplicacion">
+                            <img class="img-responsive" src="./ICONS/hibernateIcon.png" alt="Hibernate">
+                            <h6>Hibernate</h6>
+                        </div>
+
+                        <div class="tecnologiaVentanaAplicacion">
+                            <img class="img-responsive" src="./ICONS/springbootIcon.png" alt="Spring">
+                            <h6>Spring Boot</h6>
+                        </div>
+
+                        <div class="tecnologiaVentanaAplicacion">
+                            <img class="img-responsive" src="./ICONS/mockitoIcon.png" alt="Mockito">
+                            <h6>Mockito UnitTest</h6>
+                        </div>
+
+                        <div class="tecnologiaVentanaAplicacion">
+                            <img class="img-responsive" src="./ICONS/mysqlIcon.png" alt="MySQL">
+                            <h6>MySQL</h6>
+                        </div>
+
+                    </div>
+
+                    <h3 class="tituloVentanaAplicacion">Funcionalidades & Interfaz</h3>
+                    <div class="funcionalidadesVentanaAplicacion">
+                        <div class="funcionalidadVentanaAplicacion">
+                            <h6>Inicio Introductorio</h6>
+                            <p>Portada para que los usuarios se introduzcan en la aplicación con un apartado de noticias y otro explicativo.</p>
+                            <img src="./IMAGES/NodensAbyss-Index.gif" alt="IndexGif">
+                        </div>
+                        <div class="funcionalidadVentanaAplicacion">
+                            <h6>Biblioteca Introductorio</h6>
+                            <p>Portada para acceder a los recursos y herramientas de la web.</p>
+                            <img src="./IMAGES/NodensAbyss-Biblioteca.gif" alt="IndexGif">
+                        </div>
+                        <div class="funcionalidadVentanaAplicacion">
+                            <h6>Registro e Inicio de Sesión</h6>
+                            <p>Sección para registrarse e iniciar sesión en la web.</p>
+                            <img src="./IMAGES/NodensAbyss-Loggin.gif" alt="IndexGif">
+                        </div>
+                        <div class="funcionalidadVentanaAplicacion">
+                            <h6>Editar Perfil</h6>
+                            <p>Página en la que se puede editar la información registrada en el perfil y modificar la imagen de perfil.</p>
+                            <img src="./IMAGES/NodensAbyss-CambioPerfil.gif" alt="IndexGif">
+                        </div>
+                        <div class="funcionalidadVentanaAplicacion">
+                            <h6>Añadir Libros</h6>
+                            <p>Página en la que se puede añadir y editar libros subidos por uno mismo siendo autor.</p>
+                            <img src="./IMAGES/NodensAbyss-SubirLibro.gif" alt="IndexGif">
+                        </div>
+                        <div class="funcionalidadVentanaAplicacion">
+                            <h6>Editar y Visualizar Libros</h6>
+                            <p>Página en la que se puede editar y visualizar los libros subidos siendo autor.</p>
+                            <img src="./IMAGES/NodensAbyss-EditarLibros.gif" alt="IndexGif">
+                        </div>
+                    </div>
+
+                    <h3 class="tituloVentanaAplicacion">Roles & Usos</h3>
+                    <div class="rolesusosVentanaAplicacion">
+                        <div class="rolusoVentanaAplicacion">
+                            <h6>Usuarios</h6>
+                            <ul>
+                                <li>Creación de hilos en el foro.</li>
+                                <li>Puntuar y descargar obras.</li>
+                                <li>Crear, descargar y compartir mapas, arte y otras cosas.</li>
+                                <li>Uso libre de las herramientas de la página.</li>
+                                <li>Modificar su perfil libremente.</li>
+                                <li>Leer y comentar noticias.</li>
+                                <li>Jugar a rol en vivo</li>
+                            </ul>
+                        </div>
+                        <div class="rolusoVentanaAplicacion">
+                            <h6>Autores</h6>
+                            <ul>
+                                <li>Todo lo que hace los Usuarios.</li>
+                                <li>Compartir sus modulos, campañas, herramientas, etc.</li>
+                                <li>Modificar y actualizar sus obras.</li>
+                            </ul>
+                        </div>
+                        <div class="rolusoVentanaAplicacion">
+                            <h6>Periodistas</h6>
+                            <ul>
+                                <li>Todo lo que hace los Usuarios.</li>
+                                <li>Compartir noticias de actualidad.</li>
+                                <li>Modificar y actualizar sus noticias.</li>
+                            </ul>
+                        </div>
+                        <div class="rolusoVentanaAplicacion">
+                            <h6>Administradores</h6>
+                            <ul>
+                                <li>Todo lo que hacen el resto de roles.</li>
+                                <li>Editar y borrar recursos de otros usuarios.</li>
+                                <li>Modificar y/o banear usuarios.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3 class="tituloVentanaAplicacion">Paletas de Colores</h3>
+                    <div class="paletaVentanaAplicacion">
+                        <div class="textoPaletaVentanaAplicacion">
+                            <h6>Paleta Principal</h6>
+                            <p>Esta paleta se usa en las páginas principales de la web, intenta transmitir seguridad, tranquilidad, como si estuviera en un sitio seguro y tranquilo en el que pueda navegar sin preocupaciones.</p>
+                        </div>
+                        <img src="./IMAGES/paletaNodensI.png" alt="Paleta Verde">
+                    </div>
+                    <div class="paletaVentanaAplicacion">
+                        <div class="textoPaletaVentanaAplicacion">
+                            <h6>Paleta Creativa</h6>
+                            <p>Esta paleta se usa en las páginas en las que los usuarios pueden crear recursos y subirlos, se usa una paleta más impactante para intentar activar la creatividad e imaginación del usuario.</p>
+                        </div>
+                        <img src="./IMAGES/paletaNodensII.png" alt="Paleta Roja">
+                    </div>
+                    <div class="paletaVentanaAplicacion">
+                        <div class="textoPaletaVentanaAplicacion">
+                            <h6>Paleta Clasica</h6>
+                            <p>Esta paleta se usa en las páginas en las que los usuarios puedan comunicarsem mediante el foro, intentardo transmitir neutralidad y tener un estilo más clasico.</p>
+                        </div>
+                        <img src="./IMAGES/paletaNodensIII.png" alt="Paleta Marron">
+                    </div>
+                    <div class="paletaVentanaAplicacion">
+                        <div class="textoPaletaVentanaAplicacion">
+                            <h6>Paleta Seria</h6>
+                            <p>Esta paleta se usa en las páginas de la sección de noticias, intentando transmitir seriedad y veracidad al tratarse de una sección en la que los usuarios puedan subir noticias actuales.</p>
+                        </div>
+                        <img src="./IMAGES/paletaNodensIV.png" alt="Paleta Marron">
+                    </div>
+
+
+                    <h3 class="tituloVentanaAplicacion">Fuente de letras</h3>
+                    <div class="paletaVentanaAplicacion">
+                        <div class="textoPaletaVentanaAplicacion">
+                            <h6>Fuente Rol</h6>
+                            <p>Esta fuente tiene un estilo de rol medieval, para incitar a que el usuario se sumerja en la web y que sea acode con la ambientación de la página.</p>
+                        </div>
+                        <img src="./IMAGES/FuenteNodensI.png" alt="Fuente Rol">
+                    </div>
+                    <div class="paletaVentanaAplicacion">
+                        <div class="textoPaletaVentanaAplicacion">
+                            <h6>Fuente redondeada</h6>
+                            <p>Esta fuente se usa para el resto de textos, es liviana para la vista y hace que el usuario se sienta comodo al leer los textos de la página.</p>
+                        </div>
+                        <img src="./IMAGES/FuenteNodensII.png" alt="Fuente Redondeada">
+                    </div>
+
+
+                    
+
+                </div>
+            </div>
+            <!-- !NODENSABYSS PDF -->
+
+            <!-- !PIZARRA PDF -->
+            <div class="ventanaAplicacion noVer" id="ventanaPizarra">
+                <div class="barraSuperiorVentana" id="barraSuperiorVentana">
+                    <span><img src="./ICONS/pdfIcon.png" alt="dir"> Pizarra.pdf</span>
+                    <div class="botonesDerechaVentana">
+                        <div class="btnSupVentana botonCerrarVentana" onclick="cerrarAplicacion('ventanaPizarra')">
+                            <img src="./ICONS/closeIcon.png" alt="Cerrar">
+                        </div>
+                    </div>
+                </div>
+                <div class="contenidoVentanaAplicacion">
+                    <h3 class="tituloVentanaAplicacion">Pizarra V 1.0</h3>
+                    <div class="textoVentanaAplicacion">
+                        <p>Esta web es una pizarra online con una multitud de opciones y herramientas para usar libremente, está ideada para convertirse en un creador de mapas para juegos de rol y ser implementada en la web NodensAbyss.
+                            <br><br>
+                           El problema que intenta solucionar es la carencia de herramientas gratuitas y más aquellas como un creador de mapas que escasean, por lo cual esta herramienta seguirá en desarrollo para implementarse y que la comunidad pueda compartir sus mapas y usarlo en sus partidas. 
+                            <br><br>
+                            A continuación se expondrán algunos aspectos técnicos y funcionalidades de la herramienta.
+                        </p>
+                    </div>
+
+                    <h3 class="tituloVentanaAplicacion">Técnologías</h3>
+                    <div class="tecnologiasVentanaAplicacion">
+
+                        <div class="tecnologiaVentanaAplicacion">
+                            <img class="img-responsive" src="./ICONS/htmlIcon.png" alt="HTML5">
+                            <h6>HTML 5</h6>
+                        </div>
+
+                        <div class="tecnologiaVentanaAplicacion">
+                            <img class="img-responsive" src="./ICONS/cssIcon.png" alt="CSS3">
+                            <h6>CSS 3</h6>
+                        </div>
+
+                        <div class="tecnologiaVentanaAplicacion">
+                            <img class="img-responsive" src="./ICONS/jsIcon.png" alt="JS">
+                            <h6>JavaScript</h6>
+                        </div>
+
+                        <div class="tecnologiaVentanaAplicacion">
+                            <img class="img-responsive" src="./ICONS/fabricjsIcon.png" alt="FabricJS">
+                            <h6>FabricJS Library</h6>
+                        </div>
+                    </div>
+                    <h3 class="tituloVentanaAplicacion">Funcionalidades & Interfaz</h3>
+                    <div class="funcionalidadesVentanaAplicacion">
+
+                        <div class="funcionalidadVentanaAplicacion">
+                            <h6>Interfaz</h6>
+                            <p>La interfaz intenta ser intuitiva y que el usuario pueda usarla fácilmente.</p>
+                            <img src="./IMAGES/Pizarra-Interfaz.gif" alt="PizarraGif">
+                        </div>
+                        <div class="funcionalidadVentanaAplicacion">
+                            <h6>Lienzo</h6>
+                            <p>El lienzo es personalizable con colores, imagenes y patrones de forma sencilla y adapatativa al tamaño que desee el usuario.</p>
+                            <img src="./IMAGES/Pizarra-Lienzo.gif" alt="PizarraGif">
+                        </div>
+                        <div class="funcionalidadVentanaAplicacion">
+                            <h6>Pinceles</h6>
+                            <p>Hay una multitud de pinceles modificables que el usuario puede usar, mover y borrar con completa libertad.</p>
+                            <img src="./IMAGES/Pizarra-Pinceles.gif" alt="PizarraGif">
+                        </div>
+                        <div class="funcionalidadVentanaAplicacion">
+                            <h6>Objetos</h6>
+                            <p>El usuario tiene a su disposición una variedad de objetos personalizables que puede mover, replicar y modificar a su gusto.</p>
+                            <img src="./IMAGES/Pizarra-Formas.gif" alt="PizarraGif">
+                        </div>
+                        <div class="funcionalidadVentanaAplicacion">
+                            <h6>Utiles</h6>
+                            <p>La pizarra permite introducir y personalizar imagenes y textos, además de guardar de forma local, en imagenes y archivos importables su lienzo.</p>
+                            <img src="./IMAGES/Pizarra-TextosFotosGuardado.gif" alt="PizarraGif">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- !PIZARRA PDF -->
+
+            <!-- !BOTDISCORD PDF -->
+            <div class="ventanaAplicacion noVer" id="ventanaBot">
+                <div class="barraSuperiorVentana" id="barraSuperiorVentana">
+                    <span><img src="./ICONS/pdfIcon.png" alt="dir"> NodensBot-Beta.pdf</span>
+                    <div class="botonesDerechaVentana">
+                        <div class="btnSupVentana botonCerrarVentana" onclick="cerrarAplicacion('ventanaBot')">
+                            <img src="./ICONS/closeIcon.png" alt="Cerrar">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contenidoVentanaAplicacion">
+                    <h3 class="tituloVentanaAplicacion">NodensBot - Beta</h3>
+                    <div class="textoVentanaAplicacion">
+                        <p>Este es un bot personalizado para la plataforma Discord, lo que intenta solucionar es la carencia de bots que ayuden a jugar partidas de rol mediante esta plataforma, debido a que desde los últimos años se ha vuelto bastante común jugar online a los juegos de rol.
+                            <br><br>
+                           Además la idea de hacer este bot es la de brindar una nueva herramienta que compagina con la página web NodensAbyss con herramientas y útiles que pueden ser simbióticas.
+                           <br><br>
+                           A continuación hablaré de las funcionalidades y algunos aspectos técnicos que implementa este bot. 
+                        </p>
+                    </div>
+                    <h3 class="tituloVentanaAplicacion">Técnologías</h3>
+                    <div class="tecnologiasVentanaAplicacion">
+
+                        <div class="tecnologiaVentanaAplicacion">
+                            <img class="img-responsive" src="./ICONS/nodeIcon.png" alt="NodeJS">
+                            <h6>NodeJS</h6>
+                        </div>
+
+                        <div class="tecnologiaVentanaAplicacion">
+                            <img class="img-responsive" src="./ICONS/discordjsIcon.png" alt="DiscordJS">
+                            <h6>DiscordJS</h6>
+                        </div>
+
+                        <div class="tecnologiaVentanaAplicacion">
+                            <img class="img-responsive" src="./ICONS/embedtableIcon.png" alt="NodeJS">
+                            <h6>Embed-table Library</h6>
+                        </div>
+                    </div>
+
+                    <h3 class="tituloVentanaAplicacion">Funcionalidades & Interfaz</h3>
+                    <div class="funcionalidadesVentanaAplicacion">
+
+                        <div class="funcionalidadVentanaAplicacion">
+                            <h6>Bienvenida & Autorol</h6>
+                            <p>Al entrar en el servidor el bot recibe al usuario y lo dirige para que lea las normas del servidor, al aceptarlas se le asignará automáticamente le rol de <strong>"Jugador"</strong>.</p>
+                            <img src="./IMAGES/NodensBot-Bienvenida.gif" alt="BotGif">
+                        </div>
+
+                        <div class="funcionalidadVentanaAplicacion">
+                            <h6>Herramientas</h6>
+                            <p>El bot trae una variedad de herramientas que todos los usuarios pueden usar, actualmente se puede usar una herramienta de <strong>dados</strong> completamente operativa.</p>
+                            <img src="./IMAGES/NodensBot-Dados.gif" alt="BotGif">
+                        </div>
+
+                        <div class="funcionalidadVentanaAplicacion">
+                            <h6>Gestión de partidas</h6>
+                            <p>El bot permite unirse a partidas por tus amigos <strong>Masters</strong> y crearlas teniendo este rol para jugar con tu grupo y poder usar las herramientas de forma privada.</p>
+                            <img src="./IMAGES/NodensBot-GestionPartidas.gif" alt="BotGif">
+                        </div>
+
+                        <div class="funcionalidadVentanaAplicacion">
+                            <h6>Biblioteca</h6>
+                            <p>El bot ofrece de forma experimental una serie de comandos para tener los útiles de los juegos de rol a mano y no tener que estar manejando libros y libros de forma tediosa.</p>
+                            <img src="./IMAGES/NodensBot-PruebaComandosGenerales.gif" alt="BotGif">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- !BOTDISCORD PDF -->
+
+
+            <!-- !CONTACTO APP -->
+            <div class="ventanaAplicacion noVer" id="ventanaContacto">
+                <div class="barraSuperiorVentana" id="barraSuperiorVentana">
+                    <span><img src="./ICONS/contactIcon.png" alt="dir"> Contacto.exe</span>
+                    <div class="botonesDerechaVentana">
+                        <div class="btnSupVentana botonCerrarVentana" onclick="cerrarAplicacion('ventanaContacto')">
+                            <img src="./ICONS/closeIcon.png" alt="Cerrar">
+                        </div>
+                    </div>
+                </div>
+                <div class="contenidoVentanaAplicacion">
+                    <div id="container">
+                        <h1>&bull; Contacto &bull;</h1>
+                        <div class="underline">
+                        </div>
+                        <div class="icon_wrapper">
+                          <svg class="icon" viewBox="0 0 145.192 145.192">
+                            <path d="M126.82,32.694c-2.804,0-5.08,2.273-5.08,5.075v2.721c-1.462,0-2.646,1.185-2.646,2.647v1.995    c0,1.585,1.286,2.873,2.874,2.873h20.577c1.462,0,2.646-1.185,2.646-2.647v-3.041c0-1.009-0.816-1.825-1.823-1.825v-2.722    c0-2.802-2.276-5.075-5.079-5.075h-1.985v-3.829c0-3.816-3.095-6.912-6.913-6.912h-0.589h-20.45c0-2.67-2.164-4.835-4.833-4.835    H56.843c-2.67,0-4.835,2.165-4.835,4.835H34.356v-3.384h-9.563v3.384v1.178h-7.061v1.416c-2.67,0.27-10.17,1.424-13.882,5.972    c-1.773,2.17-2.44,4.791-1.983,7.793c0.463,3.043,1.271,6.346,2.128,9.841c2.354,9.616,5.024,20.515,0.549,28.077    C2.647,79.44-3.125,90.589,2.201,99.547c4.123,6.935,13.701,10.44,28.5,10.44c1.186,0,2.405-0.023,3.658-0.068v9.028h-0.296    c-2.516,0-4.558,2.039-4.558,4.558v4.566h100.04v-4.564c0-2.519-2.039-4.558-4.558-4.558h-0.297V84.631h0.297    c2.519,0,4.558-2.037,4.558-4.556v-0.009c0-2.516-2.039-4.556-4.556-4.556l-36.786-0.009V61.973c0-2.193-1.777-3.971-3.972-3.971    v-4.711h0.456c1.629,0,2.952-1.32,2.952-2.949h14.227V34.459h1.658c2.672,0,4.834-2.165,4.834-4.834h20.45v3.069H126.82z     M34.06,75.511c-2.518,0-4.558,2.04-4.558,4.556v0.009c0,2.519,2.042,4.556,4.558,4.556h0.296v24.12l-0.042-1.168    c-15.994,0.574-26.122-2.523-30.106-9.229C-0.464,90.5,4.822,80.347,6.55,77.423c4.964-8.382,2.173-19.774-0.29-29.825    c-0.843-3.442-1.639-6.696-2.088-9.638c-0.354-2.35,0.129-4.3,1.484-5.958c3.029-3.714,9.509-4.805,12.076-5.1v1.233h7.061v1.49    v2.684c-2.403,1.114-4.153,2.997-4.676,5.237H18.15c-0.584,0-1.056,0.474-1.056,1.056v0.83c0,0.584,0.475,1.056,1.056,1.056h1.984    c0.561,2.18,2.304,3.999,4.658,5.092v0.029c0,0-2.282,20.823,16.479,22.099v1.102c0,1.177,0.955,2.133,2.133,2.133h3.297    c1.178,0,2.133-0.956,2.133-2.133V50.135c0-1.177-0.955-2.132-2.133-2.132h-3.297c-1.178,0-2.133,0.955-2.133,2.132    c-1.575-0.235-5.532-1.17-6.635-4.547c2.36-1.092,4.109-2.913,4.669-5.097h1.308c0.722,0,1.309-0.584,1.309-1.308v-0.578    c0-0.584-0.475-1.056-1.056-1.056h-1.539c-0.542-2.332-2.416-4.271-4.968-5.363v-2.559h17.651c0,2.67,2.166,4.835,4.836,4.835 h2.392v15.88h13.639c0,1.629,1.321,2.949,2.951,2.949h0.899v4.711c-2.194,0-3.972,1.778-3.972,3.971v13.529L34.06,75.511z     M95.188,101.78c0,8.655-7.012,15.665-15.664,15.665c-8.653,0-15.667-7.01-15.667-15.665c0-8.647,7.014-15.664,15.667-15.664    C88.177,86.116,95.188,93.132,95.188,101.78z M97.189,45.669h-9.556c0-0.896-0.726-1.62-1.619-1.62H74.494    c-0.896,0-1.621,0.727-1.621,1.62h-8.967v-11.21h33.283V45.669z"></path>
+                            <path d="M70.865,101.78c0,4.774,3.886,8.657,8.66,8.657c4.774,0,8.657-3.883,8.657-8.657c0-4.773-3.883-8.656-8.657-8.656    C74.751,93.124,70.865,97.006,70.865,101.78z"></path>
+                          </svg>
+                        </div>
+                        <form action="https://formsubmit.co/aciworkspace01@gmail.com" method="post" id="contact_form">
+                          <div class="name">
+                            <label for="name"></label>
+                            <input type="text" placeholder="Mi nombre es" name="name" id="name_input" required>
+                          </div>
+                          <div class="email">
+                            <label for="email"></label>
+                            <input type="email" placeholder="Mi correo es" name="email" id="email_input" required>
+                          </div>
+                          <div class="subject">
+                            <label for="subject"></label>
+                            <select placeholder="Asunto" name="subject" id="subject_input" required>
+                              <option disabled hidden selected>Asunto</option>
+                              <option>Me gustaría hablar sobre un proyecto</option>
+                              <option>Me gustaría hacerte una pregunta</option>
+                              <option>Me gustaría hacerte una propuesta</option>
+                              <option>Me gustaría hablar sobre un trabajo</option>
+                              <option>Otro</option>
+                            </select>
+                          </div>
+                          <div class="message">
+                            <label for="message"></label>
+                            <textarea name="message" placeholder="Me gustaría decirte ..." id="message_input" cols="30" rows="5" required></textarea>
+                          </div>
+                          <div class="submit">
+                            <input type="submit" value="Enviar mensaje" id="form_button" />
+                          </div>
+                        </form>
+                      </div>
+
+                </div>
+            </div>
+            <!-- !CONTACTO APP -->
+
+            <!-- !PERFIL APP -->
+            <div class="ventanaAplicacion noVer" id="ventanaPerfil">
+                <div class="barraSuperiorVentana" id="barraSuperiorVentana">
+                    <span><img src="./ICONS/profileIcon.png" alt="dir"> Perfil.exe</span>
+                    <div class="botonesDerechaVentana">
+                        <div class="btnSupVentana botonCerrarVentana" onclick="cerrarAplicacion('ventanaPerfil')">
+                            <img src="./ICONS/closeIcon.png" alt="Cerrar">
+                        </div>
+                    </div>
+                </div>
+                <div class="contenidoVentanaAplicacion">
+                    <h3 class="tituloVentanaAplicacion">Perfil:</h3>
+                    <img class="imagenVentanaAplicacion" src="./IMAGES/FotoPerfil.jpeg" alt="FotoPerfil">
+                    <div class="textoVentanaAplicacion">
+                        <p>¡Bienvenido! Espero que le esté gustando mi portfolio. Me presento, me llamo Alexandru Cristian Iordache, soy un desarrollador web y un apasionado de las tecnologías.
+                            <br>
+                            He estado estudiando un ciclo formativo superior de desarrollo de aplicaciones web además de estudiar de forma autodidacta una variedad de tecnologías que podeís observar en la ventana del sistema. 
+                            <br>
+                            Por otro lado también he estado realizando una serie de proyectos propios que se pueden ver en el directorio de "Proyectos", todos ellos estan realizados con mucho esmero.
+                            <br>
+                            Aquí expondré mis contactos y enlace a redes para aquel que le interese:
+
+                            <h4 class="tituloPerfil">Redes Sociales</h4>
+                            <div class="redesSociales">
+                                <div class="redSocial">
+                                    <a href="https://github.com/RkA13xSW">
+                                        <img src="./ICONS/githubIcon.png" alt="GitHub">
+                                    </a>
+                                    <h6>GitHub</h6>
+                                </div>
+                                <div class="redSocial">
+                                    <a href="https://codepen.io/ACIWorkSpace">
+                                        <img src="./ICONS/codepenIcon.png" alt="CodePen">
+                                    </a>
+                                    <h6>CodePen</h6>
+                                </div>
+                                <div class="redSocial">
+                                    <a href="#">
+                                        <img src="./ICONS/twitterIcon.png" alt="Twitter">
+                                    </a>
+                                    <h6>Twitter</h6>
+                                </div>
+                            </div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- !PERFIL APP -->
+
+            <!-- !PREGUNTAS FRECUENTES APP -->
+            <div class="ventanaAplicacion noVer" id="ventanaHelp">
+                <div class="barraSuperiorVentana" id="barraSuperiorVentana">
+                    <span><img src="./ICONS/helpIcon.png" alt="dir"> Ayuda.exe</span>
+                    <div class="botonesDerechaVentana">
+                        <div class="btnSupVentana botonCerrarVentana" onclick="cerrarAplicacion('ventanaHelp')">
+                            <img src="./ICONS/closeIcon.png" alt="Cerrar">
+                        </div>
+                    </div>
+                </div>
+                <div class="contenidoVentanaAplicacion">
+
+                    <h3 class="tituloVentanaAplicacion">Preguntas frecuentes:</h3>
+                    <div class="textoVentanaAplicacion">
+                        <p>En esta sección se responderán una serie de preguntas frecuentes que puedan surgir.
+                           <br>
+                           En cualquier caso, para dudas más espefícicas o peticiones puede contactar mediante la aplicación del escritorio dedicada para ello.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            <!-- !PREGUNTAS FRECUENTES APP -->
+
+
+            <!-- !ESTUDIOS PDF -->
+            <!-- !ESTUDIOS PDF -->
+
+            <!-- !TRABAJO PDF -->
+            <!-- !TRABAJO PDF -->
+
+
+            <!-- TODO: APLICACIONES -->
+
+        </div>
+        <!-- !ESCRITORO -->
+
+        <script src="./JS/main.js"></script>
+
+    </body>
+</html>

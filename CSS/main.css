@@ -1,0 +1,1054 @@
+/* TODO: PALETAS DE COLORES Y FUENTES */
+/* 
+
+https://icons8.com/icons/fluency-systems-regular
+__________COLORES__________
+NEGRO --> #252525
+ROJO MAIN --> #8a3233
+ROJO MEDIO --> #890F0D
+ROJO OSCURO --> #461111
+ROJO MEDIO CLARO --> #B33030
+ROJIZO CLARO --> #FD5D5D
+ROJO INTENSO --> #950101
+ROSADO --> #A13333
+BLANCO --> #F9F2ED
+
+__________FUENTES__________ https://fonts.google.com/
+ORDENADOR:
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap');
+font-family: 'Chakra Petch', sans-serif;
+
+https://fonts.google.com/specimen/Cinzel
+https://fonts.google.com/specimen/Special+Elite
+
+
+*/
+/*! _________________________VARIABLES_________________________*/
+@import url('https://fonts.googleapis.com/css2?family=Pridi:wght@300&display=swap');
+
+:root {
+    /* COLORES */
+    --R-1: #890F0D;
+    --R-2: #8a3233;
+    --R-2B:#461111;
+    --R-3: #B33030;
+    --R-3W: #FD5D5D;
+
+    --R-R: #950101;
+    --R-W: #A13333;
+    --R-B: #252525;
+    --R-WW: #F9F2ED;
+    /* FUENTES */
+    --L-PC: 'Pridi', serif;
+  }
+
+
+
+/*! _________________________GENERAL_________________________*/
+
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
+body{
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../IMAGES/bg.png");
+    color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/*! _________________________ESCRITORIO_________________________*/
+.desk{
+    width: 100%;
+    height: 100%;
+    background-image: url("../IMAGES/wallpaper.png");
+    color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 40px;
+}
+
+/*! _________________________DIR_________________________*/
+    .desk-icon{
+        width: 80px;
+        padding: 2px;
+        height: 90px;
+        margin: 10px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+
+        .desk-icon:hover{
+            background-color: #8a32337c;
+            box-shadow: 1px 1px 1px #fd5d5da4;
+        }
+
+        .img-responsive{
+            width: 60px;
+            height: auto;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        .desk-text{
+            font-family: var(--L-PC);        
+        } 
+
+
+/*! _________________________TOP BAR_________________________*/
+.top-bar{
+    position: absolute;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 47px;
+    background-color: #252525a2;
+    box-shadow: 1px 1px 1px #8a32334b;
+    padding: 5px 10px 0px 10px;
+}
+    #relojHora{
+        width: auto;
+        height: 30px;
+        margin: 5px;
+        background-color : #252525;
+        color : #8a3233;
+        font-family : var(--L-PC);
+        text-align : center;
+        border-radius: 10px;
+        letter-spacing: 2px;
+    }
+
+    .top-bar img{
+        width: auto;
+        height: 42px;
+        display: inline-block;
+        cursor: pointer;
+        margin: 0px 5px 0px 5px;
+    }
+
+        .top-bar img:hover{
+            padding: 5px;
+            border-radius: 2px;
+        }
+
+
+
+
+
+/*! _________________________LOADING SCREEN_________________________*/
+.loadingScreen{
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("../IMAGES/bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+    .loadingLogo{
+        z-index: 1000;
+        position: absolute;
+        top: 20vh;
+        left: 0;
+        width: 100%;
+        height: 20vh;
+
+    }
+    .loadingLogo img{
+        display: block;
+        margin: 0 auto;
+        width: 300px;
+        animation-name: loadingLogoAnimation;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        border-radius: 100%;
+        border: 2px dashed #8a3233;
+    }
+    .loadingLogo h3{
+        display: block;
+        padding: 10px;
+        font-family: var(--L-PC);
+    }
+    .loadingLogo p{
+        display: block;
+        padding: 5px 20px;
+        font-family: var(--L-PC);
+    }
+
+
+/*! _________________________LOGIN SCREEN_________________________*/
+.logginScreen{
+    z-index: 90;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("../IMAGES/bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+    .loggin{
+        z-index: 91;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+        #logginForm{
+            height: auto;
+            width: auto;
+            min-width: 20vw;
+
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+
+            border-radius: 10px;
+            box-shadow: 3px 3px 3px #fd5d5d6d;
+
+            padding: 20px;
+            background-color: #8a323384;
+        }
+
+        #logginForm input, #logginForm button{
+            min-width: 90%;
+            margin-bottom: 5px;
+            background-color: #25252597;
+            color: #B33030;
+            font-family: var(--L-PC);
+        }
+
+        #logginForm label{
+            font-family: var(--L-PC);
+            min-width: 90%;
+            text-align: center;
+            background-color: #8a3233;
+            border-top-left-radius: 100%;
+            border-top-right-radius: 100%;
+        }
+
+    #logginForm input[type=button]:hover{
+        transition: 0.3s;
+        background-color: #8a3233;
+        color: #252525 ;
+    }
+        
+
+
+
+
+/*! _________________________ENTRADA BIENVENIDA_________________________*/
+.ventanaBienvenida{
+    position: absolute;
+    z-index: 5;
+    width: 400px;
+    height: 300px;
+
+
+    background-color: #f9f2edb3;
+    border-radius: 10px;
+
+    outline: 2px solid #8a3233;
+}
+    .barraSuperiorVentana{
+        width: 100%;
+        height: 25px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+
+        background-color: #252525;
+    }
+        .botonCerrarVentana{
+            width: auto;
+            height: 20px;
+        }
+        .barraSuperiorVentana span{
+            font-family: var(--L-PC);
+
+            background-color: #8a3233;
+            border-top-right-radius: 20px;
+            padding: 0px 10px 0px 10px;
+        }
+            .barraSuperiorVentana span img{
+                width: auto;
+                height: 20px;
+            }
+            .ventanaContenido{
+                width: 100%;
+                height: 100%;
+            }
+                .ventanaContenido textarea{
+                    background-color: #f9f2ed00;
+                    width: 100%;
+                    height: calc( 100% - 25px );
+                    outline:0px none transparent;
+                    padding: 10px;
+                }
+                
+                .ventanaContenido textarea:focus{
+                    outline: 0;
+                }
+
+            .botonCerrarVentana{
+                cursor: pointer;
+            }
+
+            .botonCerrarVentana img{
+                height: 100%;
+                max-height: 100%;
+                margin-right: 5px;
+                margin-bottom: 2px;
+            }
+
+
+
+
+
+/*! _________________________VENTANA SISTEMA_________________________*/
+.ventanaSistema{
+    position: absolute;
+    z-index: 50000;
+    width: 400px;
+    height: 80vh;
+    background-color: #252525ef;
+}
+    .lateralAccesosSistema{
+        display: flex;
+
+        float: left;
+        width: 50px;
+        height: 100%;
+        padding: 5px;
+        border-right: 1px solid #8a3233;
+    }
+
+    .lateralAccesosSistema div{
+        width: 100%;
+        height: auto;
+    }
+
+       .lateralAccesosSistema div img{
+        width: 100%;
+        height: auto;
+       } 
+
+
+    .aplicacionesSistema{
+        float: right;
+        width: 350px;
+        height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    .aplicacionesSistema::-webkit-scrollbar {
+        width: 5px;
+        background-color: #888;
+    }
+    
+    .aplicacionesSistema::-webkit-scrollbar-thumb {
+        background: #8a3233;
+    }
+        .aplicacionSis{
+            width: 100%;
+            height: auto;
+            padding: 5px 0px;
+        }
+        .aplicacionSis:hover{
+            background-color: #f9f2ed6e;
+        }
+            .aplicacionSis img{
+                width: 40px;
+                padding: 0px 5px;
+                height: auto;
+            } 
+            .aplicacionSis p{
+                display: inline;
+                width: var(100% - 30px);
+            }
+
+
+
+
+
+/*! _________________________VENTANAS ESTILOS COMUNES_________________________*/
+.ventana{
+    position: absolute;
+    outline: 2px solid #8a3233;
+    overflow: hidden;
+}
+    .barraSuperiorVentana{
+        cursor: grab;
+    }
+        .botonesDerechaVentana{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            width: auto;
+            height: 100%;
+        }
+            .btnSupVentana{
+                width: auto;
+                height: auto;
+                cursor: pointer;
+            }
+                .btnSupVentana img{
+                    width: auto;
+                    height: 20px;
+                    margin: 0px 5px 2px 0px;
+                }
+
+    .ventanaInterior{
+        width: 100%;
+        height: calc( 100% - 25px );
+        background-color: #f9f2ed;
+    }
+
+    .ventanaInteriorLateral{
+        float: left;
+        height: 100%;
+        width: 100px;
+        background-color: #252525;
+    }
+
+    .ventanaInteriorContenido{
+        float: right;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 100%;
+        width: calc(100% - 100px);
+    }
+
+        .carpetaVentana{
+            width: 80px;
+            padding: 2px;
+            height: 90px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+            .carpetaVentana p{
+                color: #252525;
+                font-family: var(--L-PC);
+            }
+
+        .carpetaVentana:hover{
+            background-color: #8a32337c;
+            box-shadow: 1px 1px 1px #fd5d5da4;
+        }
+
+
+
+
+
+/*! _________________________VENTANAS APLICACIONES COMUNES_________________________*/
+.ventanaAplicacion{
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    outline: 2px solid #8a3233;
+    background-color: #f9f2ed;
+    z-index: 10000000000;
+    overflow: hidden;
+}
+    .contenidoVentanaAplicacion{
+        width: 100%;
+        height: calc(100% - 25px);
+        overflow: auto;
+        overflow-x: hidden;
+    }
+    .contenidoVentanaAplicacion::-webkit-scrollbar {
+        width: 8px;
+        background-color: #252525;
+    }
+    
+    .contenidoVentanaAplicacion::-webkit-scrollbar-thumb {
+        background: #8a3233;
+    }
+    .imagenVentanaAplicacion{
+        display: block;
+        height: auto;
+        width: 200px;
+        margin: 10px auto;
+        border-radius: 100%;
+        border: 2px solid #8a3233;
+
+    }
+        .tituloVentanaAplicacion{
+            color: #8a3233;
+            text-align: center;
+            font-family: var(--L-PC);
+            background-color: #8a32337e;
+            border-bottom: 2px dashed #8a3233;
+        }
+
+        .textoVentanaAplicacion{
+            width: 100%;
+            height: auto;
+            padding: 0px 20%;
+        }
+            .textoVentanaAplicacion p{
+                color: black;
+                font-family: var(--L-PC);
+                text-align: justify;
+            }
+
+        .tecnologiasVentanaAplicacion{
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+            .tecnologiaVentanaAplicacion{
+                width: auto;
+                height: auto;
+                color: black;
+                text-align: center;
+                margin: 5px;
+                padding: 5px;
+            }
+
+            .paletaVentanaAplicacion{
+                width: 100%;
+                height: auto;
+                padding: 10px;
+
+            }
+            .paletaVentanaAplicacion img{
+                width: 300px;
+                height: auto;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .textoPaletaVentanaAplicacion{
+                width: auto;
+                padding:  0px 10px;
+            }
+                .textoPaletaVentanaAplicacion h6{                
+                    text-align: center;
+                    color: black;
+                }
+                .textoPaletaVentanaAplicacion p{                
+                    text-align: center;
+                    color: black;
+                }
+
+            .rolesusosVentanaAplicacion{
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+            }
+            .rolusoVentanaAplicacion{
+                color: black;
+                font-family: var(--L-PC);
+            }
+            .rolusoVentanaAplicacion h6{
+                text-align: center;
+                font-weight: bold;
+            }
+
+            .funcionalidadVentanaAplicacion{
+                width: 100%;
+                height: auto;
+                padding: 10px;
+
+            }
+            .funcionalidadVentanaAplicacion img{
+                width: 80%;
+                height: auto;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 10px;
+                border-radius: 10px;
+                box-shadow: 3px 3px 3px #8a3233;
+            }
+            .funcionalidadVentanaAplicacion{
+                width: auto;
+                padding:  0px 10px;
+            }
+                .funcionalidadVentanaAplicacion h6{  
+                    background-color: #8a32337a;
+                    width: fit-content;
+                    font-size: x-large;
+                    padding: 5px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    border-radius: 10px;
+                    margin-top: 20px;              
+                    text-align: center;
+                    color: black;
+                }
+                .funcionalidadVentanaAplicacion p{                
+                    text-align: center;
+                    color: black;
+                    font-weight: 500;
+                }
+
+
+
+
+
+/*! _________________________CONTACTO_________________________*/
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+#ventanaContacto{
+    font-family: 'Montserrat', Arial, sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+#ventanaContacto button {
+    overflow: visible;
+  }
+  
+  #ventanaContacto button, #ventanaContacto select {
+    text-transform: none;
+  }
+  
+  #ventanaContacto button, #ventanaContacto input, #ventanaContacto select, #ventanaContacto textarea {
+    color: #8a3233;
+    font: inherit;
+    margin: 0;
+  }
+  
+  #ventanaContacto input {
+    line-height: normal;
+  }
+  
+  #ventanaContacto textarea {
+    overflow: auto;
+  }
+  
+  #ventanaContacto #container {
+    border: solid 3px #8a3233;
+    max-width: 768px;
+    margin: 60px auto;
+    position: relative;
+  }
+  
+  #ventanaContacto form {
+    padding: 37.5px;
+    margin: 50px 0;
+  }
+  
+  #ventanaContacto h1 {
+    color: #8a3233;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 7px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  #ventanaContacto .underline {
+    border-bottom: solid 2px #8a3233;
+    margin: -0.512em auto;
+    width: 80px;
+  }
+  
+  #ventanaContacto .icon_wrapper {
+    margin: 50px auto 0;
+    width: 100%;
+  }
+  
+  #ventanaContacto .icon {
+    display: block;
+    fill: #8a3233;
+    height: 50px;
+    margin: 0 auto;
+    width: 50px;
+  }
+  
+  #ventanaContacto .email {
+      float: right;
+      width: 45%;
+  }
+  
+  #ventanaContacto input[type='text'], #ventanaContacto [type='email'], #ventanaContacto select, #ventanaContacto textarea {
+      background: none;
+    border: none;
+      border-bottom: solid 2px #8a3233;
+      color: #8a3233;
+      font-size: 1.000em;
+    font-weight: 400;
+    letter-spacing: 1px;
+      margin: 0em 0 1.875em 0;
+      padding: 0 0 0.875em 0;
+    text-transform: uppercase;
+      width: 100%;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+      -o-box-sizing: border-box;
+      box-sizing: border-box;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -ms-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+  }
+  
+  #ventanaContacto input[type='text']:focus, #ventanaContacto [type='email']:focus, #ventanaContacto textarea:focus {
+      outline: none;
+      padding: 0 0 0.875em 0;
+  }
+  
+  #ventanaContacto .message {
+      float: none;
+  }
+  
+  #ventanaContacto .name {
+      float: left;
+      width: 45%;
+  }
+  
+  #ventanaContacto select {
+    background: url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-32.png') no-repeat right;
+    outline: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+  }
+  
+  #ventanaContacto select::-ms-expand {
+    display: none;
+  }
+  
+  #ventanaContacto .subject {
+    width: 100%;
+  }
+  
+  #ventanaContacto .telephone {
+    width: 100%;
+  }
+  
+  #ventanaContacto textarea {
+      line-height: 150%;
+      height: 150px;
+      resize: none;
+    width: 100%;
+  }
+  
+  #ventanaContacto::-webkit-input-placeholder {
+      color: #8a3233;
+  }
+  
+  #ventanaContacto:-moz-placeholder { 
+      color: #8a3233;
+      opacity: 1;
+  }
+  
+  #ventanaContacto::-moz-placeholder {
+      color: #8a3233;
+      opacity: 1;
+  }
+  
+  #ventanaContacto:-ms-input-placeholder {
+      color: #8a3233;
+  }
+  
+  #ventanaContacto #form_button {
+    background: none;
+    border: solid 2px #8a3233;
+    color: #8a3233;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Helvetica', Arial, sans-serif;
+    font-size: 0.875em;
+    font-weight: bold;
+    outline: none;
+    padding: 20px 35px;
+    text-transform: uppercase;
+    -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -ms-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+  }
+  
+  #ventanaContacto #form_button:hover {
+    background: #8a3233;
+    color: #F2F3EB;
+  }
+  
+  @media screen and (max-width: 768px) {
+    #ventanaContacto #container {
+      margin: 20px auto;
+      width: 95%;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    #ventanaContacto h1 {
+      font-size: 26px;
+    }
+    
+    #ventanaContacto .underline {
+      width: 68px;
+    }
+    
+    #ventanaContacto #form_button {
+      padding: 15px 25px;
+    }
+  }
+  
+  @media screen and (max-width: 420px) {
+    #ventanaContacto h1 {
+      font-size: 18px;
+    }
+    
+    #ventanaContacto .icon {
+      height: 35px;
+      width: 35px;
+    }
+    
+    #ventanaContacto .underline {
+      width: 53px;
+    }
+    
+    #ventanaContacto input[type='text'], #ventanaContacto [type='email'], #ventanaContacto select, #ventanaContacto textarea {
+      font-size: 0.875em;
+    }
+  }
+
+
+
+
+
+/*! _________________________PERFIL_________________________*/
+.tituloPerfil{  
+    font-family: var(--L-PC);
+    border: 2px dashed #8a3233;
+    background-color: #8a32337a;
+    width: fit-content;
+    font-size: x-large;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    margin-top: 20px;              
+    text-align: center;
+    color: black;
+}
+.redesSociales{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.redSocial img{
+    width: 80px;
+    height: auto;
+}
+.redSocial h6{
+    text-decoration: none !important;
+    border: none;
+    font-family: var(--L-PC);
+    color: #252525;
+    text-align: center;
+}
+
+
+
+
+/*! _________________________CLASES COMUNES_________________________*/
+
+
+
+
+
+.noVer{
+    display: none;
+}
+.ver{
+    display: initial;
+}
+
+
+
+
+
+
+
+
+
+/*! _________________________ANIMACIONES_________________________*/
+
+
+
+
+
+@keyframes loadingLogoAnimation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes entradaLateralDerecha {
+    from {
+        top: 50px;
+        right: -1000px;
+    }
+    to {
+        top: 50px;
+        right: 5px;
+    }
+}  
+
+@keyframes entradaSuperiorIzquierda {
+    from {
+        left: 10px;
+        top: -1000px;
+    }
+    to {
+        left: 10px;
+        top: 47px;
+    }
+}  
+
+@keyframes cerrarVentana {
+    from{
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+} 
+@keyframes abrirVentana {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+} 
+@keyframes parpadeoVentana {
+    0%{
+        opacity: 1;
+    }
+    25%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    75%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+
+
+
+/*! _________________________RESPONSIVE_________________________*/
+
+
+@media only screen and (max-width: 600px) {
+    /* BIENVENIDA */
+    .ventanaBienvenida{
+        width: 90vw;
+    }
+
+    /* BARRA SUPERIOR */
+    #relojHora{
+        width: auto;
+        height: 30px;
+        margin: 2px;
+        background-color : #252525;
+        color : #8a3233;
+        font-family : var(--L-PC);
+        text-align : center;
+        border-radius: 10px;
+        letter-spacing: 1px;
+    }
+
+    .top-bar img{
+        width: auto;
+        height: 35px;
+        display: inline-block;
+        cursor: pointer;
+        margin: 0px 2px 0px 2px;
+    }
+
+    /* VENTANA SISTEMA */
+    .ventanaSistema{
+        width: 95vw;
+        height: 80vh;
+        background-color: #252525ef;
+    }
+
+    .lateralAccesosSistema{
+        width: 30px;
+        height: 100%;
+        padding: 5px;
+        border-right: 1px solid #8a3233;
+    }
+
+    .aplicacionesSistema{
+        width: calc(100% - 42px);
+        height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+        .aplicacionSis{
+            width: 100%;
+            height: auto;
+            padding: 5px 0px;
+        }
+    /* VENTANAS */
+    .ventana{
+        min-width: calc(95vw - 4px) !important;
+    }
+}
