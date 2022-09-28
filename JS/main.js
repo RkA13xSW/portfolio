@@ -51,7 +51,7 @@ function finalizacionCarga(){
 
 // TODO: VENTANA SALUDO:
 function cambiarTextoSaludo(){
-    document.getElementById("saludo").value = `!Bienvenido a mi portfolio ${username}! \nSe irá actualizando el contenido a medida de que haya cambios. \nSi encuentra cualquier error o tiene cualquier duda contacteme sin ningún problema. \nTodos los iconos que puedes observar son interactuables ¿Quién sabe que habrá? \n¡Espero que lo disfrute! `;
+    document.getElementById("saludo").value = `!Bienvenido a mi portfolio ${username}! \nSe irá actualizando el contenido a medida de que haya cambios. \nSi encuentra cualquier error o tiene cualquier duda contacteme sin ningún problema. \nTodos los iconos que puedes observar son interactuables y las carpetas se abren con doble click ¿Quién sabe que habrá? \n¡Espero que lo disfrute! `;
 }
 
 // TODO: FUNCIÓN PARA REALIZAR UNA ENTRADA ANIMADA Y QUE PERMANEZCA
