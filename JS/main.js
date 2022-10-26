@@ -46,7 +46,7 @@ function finalizacionCarga(){
     cambiarFraseCarga();
     mueveReloj();
     eventoDragVentanas();
-    setTimeout('cambiarVisibilidad(`loadingScreen`)', 3000);
+    cambiarVisibilidad(`loadingScreen`);
 }
 
 // TODO: VENTANA SALUDO:
