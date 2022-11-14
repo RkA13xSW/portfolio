@@ -512,6 +512,20 @@ body{
             border-bottom: 2px dashed #8a3233;
         }
 
+        .ventanaEnlaceWeb{
+            color: #8a3233;
+            text-align: center;
+            font-family: var(--L-PC);
+            background-color: #8a32337e;
+            border: 2px dashed #8a3233;
+            border-radius: 10px;
+            padding: 5px;
+
+            display: block;
+            margin: 10px auto;
+            width: fit-content;
+        }
+
         .textoVentanaAplicacion{
             width: 100%;
             height: auto;

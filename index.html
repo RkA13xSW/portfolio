@@ -106,6 +106,11 @@
                 </div>
 
                 <div class="aplicacionSis">
+                    <img src="./ICONS/chatjsIcon.png" alt="ChartJS">
+                    <p>Chart.JS</p>
+                </div>     
+
+                <div class="aplicacionSis">
                     <img src="./ICONS/discordjsIcon.png" alt="DiscordJS">
                     <p>DiscordJS</p>
                 </div>
@@ -300,6 +305,10 @@
                         <div  ondblclick="mostrarAplicacion('ventanaBot')" class="carpetaVentana text-center overflow-hidden" id="carpetaBotNodens">
                             <img src="./ICONS/necroIcon.png" alt="PC" class="img-responsive">
                             <p class="desk-text text-truncate user-select-none" >NecronomiconBot.pdf</p>
+                        </div>
+                        <div  ondblclick="mostrarAplicacion('ventanaPokePlace')" class="carpetaVentana text-center overflow-hidden" id="carpetaPokeplace">
+                            <img src="./ICONS/pokeplaceIcon.png" alt="PC" class="img-responsive">
+                            <p class="desk-text text-truncate user-select-none" >Pokeplace.pdf</p>
                         </div>
                     </div>
                 </div>
@@ -666,6 +675,80 @@
                 </div>
             </div>
             <!-- !PIZARRA PDF -->
+
+            <!-- !POKEPLACE PDF -->
+<!-- ventanaPokePlace -->
+            <div class="ventanaAplicacion noVer" id="ventanaPokePlace">
+                <div class="barraSuperiorVentana" id="barraSuperiorVentana">
+                    <span><img src="./ICONS/pdfIcon.png" alt="dir"> Pokeplace V1.pdf</span>
+                    <div class="botonesDerechaVentana">
+                        <div class="btnSupVentana botonCerrarVentana" onclick="cerrarAplicacion('ventanaPokePlace')">
+                            <img src="./ICONS/closeIcon.png" alt="Cerrar">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contenidoVentanaAplicacion">
+                    <h3 class="tituloVentanaAplicacion">Pokeplace V.1</h3>
+                    <div class="textoVentanaAplicacion">
+                        <p>Esta web es una muestra de utilización de API, concretamente de <a target="_blank" href="https://pokeapi.co/">PokeAPI</a>. 
+                            <br><br>
+                        Pokeplace contiene cuatro secciones para que los usuarios puedan disfrutar de la pokeapi de forma dinámica. Estas secciones son las siguientes:
+                        </p>
+                    </div>
+                    <h3 class="tituloVentanaAplicacion">Técnologías</h3>
+                    <div class="tecnologiasVentanaAplicacion">
+
+                        <div class="tecnologiaVentanaAplicacion">
+                            <img class="img-responsive" src="./ICONS/htmlIcon.png" alt="HTML 5">
+                            <h6>HTML 5</h6>
+                        </div>
+
+                        <div class="tecnologiaVentanaAplicacion">
+                            <img class="img-responsive" src="./ICONS/cssIcon.png" alt="CSS 3">
+                            <h6>CSS 3</h6>
+                        </div>
+
+                        <div class="tecnologiaVentanaAplicacion">
+                            <img class="img-responsive" src="./ICONS/jsIcon.png" alt="JavaScript">
+                            <h6>JavaScript</h6>
+                        </div>
+
+                        <div class="tecnologiaVentanaAplicacion">
+                            <img class="img-responsive" src="./ICONS/chatjsIcon.png" alt="ChartJS">
+                            <h6>Chart.JS</h6>
+                        </div>
+                    </div>
+
+                    <a class="ventanaEnlaceWeb" target="_blank" href="https://rka13xsw.github.io/Pokeplace/">Ver Pokeplace</a>
+
+                    <h3 class="tituloVentanaAplicacion">Funcionalidades & Interfaz</h3>
+                    <div class="funcionalidadesVentanaAplicacion">
+
+                        <div class="funcionalidadVentanaAplicacion">
+                            <h6>Pokedex</h6>
+                            <p>Esta sección replica la pokedex del juego, mostrando la cadena evolutiva e información del pokemon que se muesta.</p>
+                        </div>
+
+                        <div class="funcionalidadVentanaAplicacion">
+                            <h6>Adivina!</h6>
+                            <p>Este es un juego de adivinar el pokemon mostrado (pero con un filtro negro) con intentos, pistas sobre el mismo y más.</p>
+                        </div>
+
+                        <div class="funcionalidadVentanaAplicacion">
+                            <h6>Tabla de tipos</h6>
+                            <p>Mítica tabla de tipos pokemon con iconos customizados.</p>
+                        </div>
+
+                        <div class="funcionalidadVentanaAplicacion">
+                            <h6>Pokepedia</h6>
+                            <p>Catálogo completo de pokemons, pudiendo filtrarlos, buscarlos por texto y verlos en detalle con sus estadísticas e información.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- !POKEPLACE PDF -->
 
             <!-- !BOTDISCORD PDF -->
             <div class="ventanaAplicacion noVer" id="ventanaBot">
