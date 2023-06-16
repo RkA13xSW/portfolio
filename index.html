@@ -91,6 +91,16 @@
                 </div>
 
                 <div class="aplicacionSis">
+                    <img src="./ICONS/kafka.png" alt="Kafka">
+                    <p>Kafka</p>
+                </div>
+
+                <div class="aplicacionSis">
+                    <img src="./ICONS/websockets.png" alt="WebSockets">
+                    <p>WebSockets</p>
+                </div>
+
+                <div class="aplicacionSis">
                     <img src="./ICONS/sqlIcon.png" alt="SQL">
                     <p>SQL Database</p>
                 </div>
@@ -102,7 +112,7 @@
 
                 <div class="aplicacionSis">
                     <img src="./ICONS/h2Icon.png" alt="H2">
-                    <h6>H2 Database</h6>
+                    <p>H2 Database</p>
                 </div>
                 
                 <div class="aplicacionSis">
@@ -362,6 +372,10 @@
                         <div  ondblclick="mostrarAplicacion('ventanaUniversidad')" class="carpetaVentana text-center overflow-hidden" id="carpetaUniversidad">
                             <img src="./ICONS/universidadIcon.png" alt="PC" class="img-responsive">
                             <p class="desk-text text-truncate user-select-none" >Universidad.pdf</p>
+                        </div>
+                        <div  ondblclick="mostrarAplicacion('ventanaMagicPlace')" class="carpetaVentana text-center overflow-hidden" id="carpetaMagicplace">
+                            <img src="./ICONS/magicPlaceIcon.png" alt="PC" class="img-responsive">
+                            <p class="desk-text text-truncate user-select-none" >MagicPlace.pdf</p>
                         </div>
                     </div>
                 </div>
@@ -814,7 +828,6 @@
             <!-- !POKEPLACE PDF -->
 
             <!-- !COMPONENTES INTEGRALES PDF -->
-
             <div class="ventanaAplicacion noVer" id="ventanaComponentesIntegrales">
                 <div class="barraSuperiorVentana" id="barraSuperiorVentana">
                     <span><img src="./ICONS/pdfIcon.png" alt="dir"> ComponentesIntegrales.pdf</span>
@@ -917,7 +930,6 @@
                     </div>
                 </div>
             </div>
-
             <!-- !COMPONENTES INTEGRALES PDF -->
 
             <!-- !UNIVERSIDAD PDF -->
@@ -1201,6 +1213,99 @@
             </div>
             <!-- !BOTDISCORD PDF -->
 
+            <!-- !MAGICPLACE PDF -->
+            <div class="ventanaAplicacion noVer" id="ventanaMagicPlace">
+                <div class="barraSuperiorVentana" id="barraSuperiorVentana">
+                    <span><img src="./ICONS/pdfIcon.png" alt="dir"> Magicplace V1.pdf</span>
+                    <div class="botonesDerechaVentana">
+                        <div class="btnSupVentana botonCerrarVentana" onclick="cerrarAplicacion('ventanaMagicPlace')">
+                            <img src="./ICONS/closeIcon.png" alt="Cerrar">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contenidoVentanaAplicacion">
+                    <h3 class="tituloVentanaAplicacion">Magicplace V.1</h3>
+                    <div class="textoVentanaAplicacion">
+                        <p>Esta web es una muestra de utilización de API, concretamente de <a target="_blank" href="https://docs.magicthegathering.io/">MTGAPI</a>. 
+                            <br><br>
+                        Magicplace contiene una variedad de herramientas para que los usuarios puedan disfrutar de la plataforma de forma dinámica. Estas herramientas son las siguientes:
+                        </p>
+                    </div>
+                    <h3 class="tituloVentanaAplicacion">Técnologías</h3>
+                    <div class="tecnologiasVentanaAplicacion">
+
+                        <div class="tecnologiaVentanaAplicacion">
+                            <img class="img-responsive" src="./ICONS/htmlIcon.png" alt="HTML 5">
+                            <h6>HTML 5</h6>
+                        </div>
+
+                        <div class="tecnologiaVentanaAplicacion">
+                            <img class="img-responsive" src="./ICONS/cssIcon.png" alt="CSS 3">
+                            <h6>CSS 3</h6>
+                        </div>
+
+                        <div class="tecnologiaVentanaAplicacion">
+                            <img class="img-responsive" src="./ICONS/typescriptIcon.png" alt="Typescript">
+                            <h6>TypeScript</h6>
+                        </div>
+
+                        <div class="tecnologiaVentanaAplicacion">
+                            <img class="img-responsive" src="./ICONS/angularIcon.png" alt="Angular">
+                            <h6>Angular 13</h6>
+                        </div>
+
+                        <div class="tecnologiaVentanaAplicacion">
+                            <img class="img-responsive" src="./ICONS/bootstrapIcon.png" alt="Bootstrap">
+                            <h6>Bootstrap 5</h6>
+                        </div>
+                    </div>
+
+                    <a class="ventanaEnlaceWeb" target="_blank" href="https://rka13xsw.github.io/magicplace/">Ver Magicplace</a>
+
+                    <h3 class="tituloVentanaAplicacion">Funcionalidades & Interfaz</h3>
+                    <div class="funcionalidadesVentanaAplicacion">
+
+                        <div class="funcionalidadVentanaAplicacion">
+                            <h6>Interfaz</h6>
+                            <p>La plataforma ofrece una interfaz simple y cómoda para el uso del usuario, con una paleta de colores minimalista y cómoda para la vista.</p>
+                            <img src="./IMAGES/magicplace1.png" alt="InterfazMagicPlace">
+                        </div>
+
+                        <div class="funcionalidadVentanaAplicacion">
+                            <h6>Colecciones</h6>
+                            <p>En esta sección de la aplicación se puede observar en una simple tabla todas las colecciones existentes de este juego. Pudiendo ordenarlas y filtrarlas.</p>
+                            <img src="./IMAGES/magicplace2.png" alt="Colecciones Magic">
+                        </div>
+
+                        <div class="funcionalidadVentanaAplicacion">
+                            <h6>Observar colecciones</h6>
+                            <p>Se permite visualizar la información de las colecciones y las cartas que la misma contiene. Además de poder descargas un pdf generado con el presupuesto de la colección y la información de sus cartas.</p>
+                            <img src="./IMAGES/magicplace3.png" alt="Observar colecciones magic">
+                        </div>
+
+                        <div class="funcionalidadVentanaAplicacion">
+                            <h6>Catalogo</h6>
+                            <p>En esta sección se pueden ver todas las cartas del juego, así como filtrarlas por una gran variedad de datos.</p>
+                            <img src="./IMAGES/magicplace4.png" alt="Pokepedia">
+                        </div>
+
+                        <div class="funcionalidadVentanaAplicacion">
+                            <h6>Observar carta</h6>
+                            <p>Se permite ver la información detallada de todas las cartas del juego, además de las plataformas donde están disponibles su compra.</p>
+                            <img src="./IMAGES/magicplace5.png" alt="Pokepedia">
+                        </div>
+
+                        <div class="funcionalidadVentanaAplicacion">
+                            <h6>Mazos</h6>
+                            <p>Esta herramienta permite crear mazos completamente personalizados, además de poder ver los mazos guardados, modificarlos y descargar un presupuesto en formato PDF.</p>
+                            <img src="./IMAGES/magicplace6.png" alt="Pokepedia">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- !MAGICPLACE PDF -->
+
 
             <!-- !CONTACTO APP -->
             <div class="ventanaAplicacion noVer" id="ventanaContacto">
@@ -1269,7 +1374,7 @@
                 </div>
                 <div class="contenidoVentanaAplicacion">
                     <h3 class="tituloVentanaAplicacion">Perfil:</h3>
-                    <img class="imagenVentanaAplicacion" src="./IMAGES/FotoPerfil.jpeg" alt="FotoPerfil">
+                    <img class="imagenVentanaAplicacion" src="./IMAGES/FotoPerfil2.jpg" alt="FotoPerfil">
                     <div class="textoVentanaAplicacion">
                         <p>¡Bienvenido! Espero que le esté gustando mi portfolio. Me presento, me llamo Alexandru Cristian Iordache, soy un desarrollador web y un apasionado de las tecnologías.
                             <br>
@@ -1292,6 +1397,12 @@
                                         <img src="./ICONS/codepenIcon.png" alt="CodePen">
                                     </a>
                                     <h6>CodePen</h6>
+                                </div>
+                                <div class="redSocial">
+                                    <a href="https://www.linkedin.com/in/alexandruci/">
+                                        <img src="./ICONS/linkedin.png" alt="Linkedin">
+                                    </a>
+                                    <h6>Linkedin</h6>
                                 </div>
                                 <div class="redSocial">
                                     <a href="#">
