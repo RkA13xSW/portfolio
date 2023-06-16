@@ -377,6 +377,11 @@
                             <img src="./ICONS/magicPlaceIcon.png" alt="PC" class="img-responsive">
                             <p class="desk-text text-truncate user-select-none" >MagicPlace.pdf</p>
                         </div>
+                        <div  ondblclick="mostrarAplicacion('ventanaNodensBooks')" class="carpetaVentana text-center overflow-hidden" id="carpetaNodensBooks">
+                            <img src="./ICONS/nodensBooksIcon.png" alt="PC" class="img-responsive">
+                            <p class="desk-text text-truncate user-select-none" >NodensBooks.pdf</p>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -1300,6 +1305,147 @@
                             <h6>Mazos</h6>
                             <p>Esta herramienta permite crear mazos completamente personalizados, además de poder ver los mazos guardados, modificarlos y descargar un presupuesto en formato PDF.</p>
                             <img src="./IMAGES/magicplace6.png" alt="Pokepedia">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- !MAGICPLACE PDF -->
+
+            <!-- !NODENSBOOKS PDF -->
+            <div class="ventanaAplicacion noVer" id="ventanaNodensBooks">
+                <div class="barraSuperiorVentana" id="barraSuperiorVentana">
+                    <span><img src="./ICONS/pdfIcon.png" alt="dir"> NodensBooks.pdf</span>
+                    <div class="botonesDerechaVentana">
+                        <div class="btnSupVentana botonCerrarVentana" onclick="cerrarAplicacion('ventanaNodensBooks')">
+                            <img src="./ICONS/closeIcon.png" alt="Cerrar">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contenidoVentanaAplicacion">
+                    <h3 class="tituloVentanaAplicacion">NodensBooks</h3>
+                    <div class="textoVentanaAplicacion">
+                        <p>
+                            Plataforma web destinada a compartir recursos destinados para juegos de rol. La misma cuenta con una interfaz con un estilo medieval y RPG para que los usuarios puedan estar más inmersivo.
+                            <br><br>
+                            Esta plataforma cuenta con un control de roles, los cuales son: Jugador, Autor y Master. Con sus correspondientes permisos de acceso y sus herramientas únicas. 
+                            <br>
+                            A continuación se realizará una exposición de las partes más relevantes de la aplicación además de las tecnologías usadas en el desarrollo de la misma.
+                        </p>
+                    </div>
+                    <h3 class="tituloVentanaAplicacion">Técnologías</h3>
+                    <div class="tecnologiasVentanaAplicacion">
+
+                        <div class="tecnologiaVentanaAplicacion">
+                            <img class="img-responsive" src="./ICONS/htmlIcon.png" alt="HTML 5">
+                            <h6>HTML 5</h6>
+                        </div>
+
+                        <div class="tecnologiaVentanaAplicacion">
+                            <img class="img-responsive" src="./ICONS/cssIcon.png" alt="CSS 3">
+                            <h6>CSS 3</h6>
+                        </div>
+
+                        <div class="tecnologiaVentanaAplicacion">
+                            <img class="img-responsive" src="./ICONS/typescriptIcon.png" alt="Typescript">
+                            <h6>TypeScript</h6>
+                        </div>
+
+                        <div class="tecnologiaVentanaAplicacion">
+                            <img class="img-responsive" src="./ICONS/angularIcon.png" alt="Angular">
+                            <h6>Angular 13</h6>
+                        </div>
+
+                        <div class="tecnologiaVentanaAplicacion">
+                            <img class="img-responsive" src="./ICONS/javaIcon.png" alt="Java">
+                            <h6>Java 17</h6>
+                        </div>
+
+                        <div class="tecnologiaVentanaAplicacion">
+                            <img class="img-responsive" src="./ICONS/springbootIcon.png" alt="SpringBoot">
+                            <h6>Spring Boot</h6>
+                        </div>
+
+                        <div class="tecnologiaVentanaAplicacion">
+                            <img class="img-responsive" src="./ICONS/jpaIcon.png" alt="JPA">
+                            <h6>JPA</h6>
+                        </div>
+
+                        <div class="tecnologiaVentanaAplicacion">
+                            <img class="img-responsive" src="./ICONS/lombokIcon.png" alt="Lombok">
+                            <h6>Lombok</h6>
+                        </div>
+
+                        <div class="tecnologiaVentanaAplicacion">
+                            <img class="img-responsive" src="./ICONS/tomcatIcon.png" alt="Tomcat">
+                            <h6>Tomcat</h6>
+                        </div>
+
+                        <div class="tecnologiaVentanaAplicacion">
+                            <img class="img-responsive" src="./ICONS/hibernateIcon.png" alt="Hibernate">
+                            <h6>Hibernate</h6>
+                        </div>
+
+                        <div class="tecnologiaVentanaAplicacion">
+                            <img class="img-responsive" src="./ICONS/postmanIcon.png" alt="Postman">
+                            <h6>Postman</h6>
+                        </div>
+
+                        <div class="tecnologiaVentanaAplicacion">
+                            <img class="img-responsive" src="./ICONS/photoshopIcon.png" alt="Photoshop">
+                            <h6>Photoshop</h6>
+                        </div>
+                    </div>
+
+                    <h3 class="tituloVentanaAplicacion">Funcionalidades & Interfaz</h3>
+                    <div class="funcionalidadesVentanaAplicacion">
+
+                        <div class="funcionalidadVentanaAplicacion">
+                            <h6>Interfaz</h6>
+                            <p>La plataforma ofrece una bastante compleja para simular el estilo RPG que intenta transmitir, cambiando los menús tipicos por conversaciones con 'NPCs'.</p>
+                            <img src="./IMAGES/nodensbooks1.png" alt="InterfazNodensbooks">
+                        </div>
+
+                        <div class="funcionalidadVentanaAplicacion">
+                            <h6>Registro</h6>
+                            <p>La zona de ingreso y registro requieren pocos datos por parte del usuario, para facilitar la entreda del máximo número de gente posible.</p>
+                            <img src="./IMAGES/nodensbooks2.png" alt="RegistroNodensBooks">
+                        </div>
+
+                        <div class="funcionalidadVentanaAplicacion">
+                            <h6>Zonas de usuario</h6>
+                            <p>Al ingresar correctamente, el usuario podrá visualizar sus datos y sus herramientas personales, para poder gestionar sus datos, subir recursos y gestionarlos en el caso de los autores y gestionar la aplicación en el caso de los masters.</p>
+                            <img src="./IMAGES/nodensbooks3.png" alt="ZonaUsuarioNodensBooks">
+                        </div>
+
+                        <div class="funcionalidadVentanaAplicacion">
+                            <h6>Gestión Usuario</h6>
+                            <p>Los usuarios podrán gestionar su cuenta a placer, cambiando sus datos, imagen de perfil y contraseña de acceso.</p>
+                            <img src="./IMAGES/nodensbooks4.png" alt="GestionUsuarioNodensBooks">
+                        </div>
+
+                        <div class="funcionalidadVentanaAplicacion">
+                            <h6>Obras</h6>
+                            <p>Los autores y los adminsitradores podrán subir nuevas obras y gestionar sus propias obras, visualizando el flujo de gente que interactua con las mismas.</p>
+                            <img src="./IMAGES/nodensbooks5.png" alt="ObrasNodensBooks">
+                        </div>
+
+                        <div class="funcionalidadVentanaAplicacion">
+                            <h6>Gestión de Usuarios</h6>
+                            <p>Los Masters podrán visualizar los usuarios de la plataforma, así como vetar cuentas y cambiar los roles de los mismos.</p>
+                            <img src="./IMAGES/nodensbooks6.png" alt="GestionUsuariosNodensBooks">
+                        </div>
+
+                        <div class="funcionalidadVentanaAplicacion">
+                            <h6>Gestión de obras</h6>
+                            <p>Los masters podrán gestionar las obras de todos los usuarios, para poder eliminar o ver las diferentes obras.</p>
+                            <img src="./IMAGES/nodensbooks7.png" alt="GestionObrasNodensBooks">
+                        </div>
+
+                        <div class="funcionalidadVentanaAplicacion">
+                            <h6>Ver obras</h6>
+                            <p>Cualquier usuario registrado podrá ver las obras de todos los usuarios, así como descargarlos, comentarlos y puntuarlos.</p>
+                            <img src="./IMAGES/nodensbooks8.png" alt="VerObrasNodensBooks">
                         </div>
                     </div>
                 </div>
