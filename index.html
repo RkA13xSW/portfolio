@@ -381,7 +381,10 @@
                             <img src="./ICONS/nodensBooksIcon.png" alt="PC" class="img-responsive">
                             <p class="desk-text text-truncate user-select-none" >NodensBooks.pdf</p>
                         </div>
-                        
+                        <div  ondblclick="mostrarAplicacion('ventanaDChat')" class="carpetaVentana text-center overflow-hidden" id="carpetaDChat">
+                            <img src="./ICONS/dchat_icon.png" alt="PC" class="img-responsive">
+                            <p class="desk-text text-truncate user-select-none" >DChat.pdf</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1450,7 +1453,108 @@
                     </div>
                 </div>
             </div>
-            <!-- !MAGICPLACE PDF -->
+            <!-- !NODENSBOOKS PDF -->
+
+            <!-- !DCHAT PDF -->
+            <div class="ventanaAplicacion noVer" id="ventanaDChat">
+                <div class="barraSuperiorVentana" id="barraSuperiorVentana">
+                    <span><img src="./ICONS/pdfIcon.png" alt="dir"> DChat.pdf</span>
+                    <div class="botonesDerechaVentana">
+                        <div class="btnSupVentana botonCerrarVentana" onclick="cerrarAplicacion('ventanaDChat')">
+                            <img src="./ICONS/closeIcon.png" alt="Cerrar">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contenidoVentanaAplicacion">
+                    <h3 class="tituloVentanaAplicacion">DChat</h3>
+                    <div class="textoVentanaAplicacion">
+                        <p>Esta es una sencilla plataforma web que permite contactar con gente anónimamente mediante un chat a tiempo real o correos electrónicos. Este misma plataforma deja registrados todas las acciones en una auditoria.
+                            <br>
+                           A continuación se podrá apreciar las tecnologías usadas y las vistas con sus usos de la plataforma
+                        </p>
+                    </div>
+                    <h3 class="tituloVentanaAplicacion">Técnologías</h3>
+                    <div class="tecnologiasVentanaAplicacion">
+
+                        <div class="tecnologiaVentanaAplicacion">
+                            <img class="img-responsive" src="./ICONS/htmlIcon.png" alt="HTML 5">
+                            <h6>HTML 5</h6>
+                        </div>
+
+                        <div class="tecnologiaVentanaAplicacion">
+                            <img class="img-responsive" src="./ICONS/cssIcon.png" alt="CSS 3">
+                            <h6>CSS 3</h6>
+                        </div>
+
+                        <div class="tecnologiaVentanaAplicacion">
+                            <img class="img-responsive" src="./ICONS/jsIcon.png" alt="JavaScript">
+                            <h6>JavaScript</h6>
+                        </div>
+
+                        <div class="tecnologiaVentanaAplicacion">
+                            <img class="img-responsive" src="./ICONS/bootstrapIcon.png" alt="Bootstrap">
+                            <h6>Bootstrap 5</h6>
+                        </div>
+
+                        <div class="tecnologiaVentanaAplicacion">
+                            <img class="img-responsive" src="./ICONS/websockets.png" alt="websockets">
+                            <h6>WebSockets</h6>
+                        </div>
+
+                        <div class="tecnologiaVentanaAplicacion">
+                            <img class="img-responsive" src="./ICONS/kafka.png" alt="kafka">
+                            <h6>Apache Kafka</h6>
+                        </div>
+
+                        <div class="tecnologiaVentanaAplicacion">
+                            <img class="img-responsive" src="./ICONS/javaIcon.png" alt="Java">
+                            <h6>Java 17</h6>
+                        </div>
+
+                        <div class="tecnologiaVentanaAplicacion">
+                            <img class="img-responsive" src="./ICONS/springbootIcon.png" alt="SpringBoot">
+                            <h6>Spring Framework</h6>
+                        </div>
+                    </div>
+
+                    <h3 class="tituloVentanaAplicacion">Funcionalidades & Interfaz</h3>
+                    <div class="funcionalidadesVentanaAplicacion">
+
+                        <div class="funcionalidadVentanaAplicacion">
+                            <h6>Interfaz</h6>
+                            <p>La plataforma ofrece tres herramientas de comunicación presentadas en una interfaz minimalista.</p>
+                            <img src="./IMAGES/dchat1.png" alt="InterfazDChat">
+                        </div>
+
+                        <div class="funcionalidadVentanaAplicacion">
+                            <h6>Chat</h6>
+                            <p>La primera herramienta ofrece una comunicación a tiempo real en un chat general. Para lo cual se ha usado WebSockets.</p>
+                            <img src="./IMAGES/dchat2.png" alt="ChatDchat">
+                        </div>
+
+                        <div class="funcionalidadVentanaAplicacion">
+                            <h6>Mensajería</h6>
+                            <p>La segunda herramienta permite mandar correos electrónicos de forma anónima. Para lo cual se ha usado Spring Email.</p>
+                            <img src="./IMAGES/dchat3.png" alt="EmailDchat">
+                        </div>
+
+                        <div class="funcionalidadVentanaAplicacion">
+                            <h6>Asistencia</h6>
+                            <p>Esta tercera herramienta permite al usuario contactar con la administración en caso de requerir asistencia.</p>
+                            <img src="./IMAGES/dchat4.png" alt="AsistenciaDChat">
+                        </div>
+
+                        <div class="funcionalidadVentanaAplicacion">
+                            <h6>Auditoria</h6>
+                            <p>Todos los movimientos de los usuarios son registrados en una auditoria a tiempo real usando Kafka.</p>
+                            <img src="./IMAGES/dchat5.png" alt="AuditoriaDChat">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- !DCHAT PDF -->
+
 
 
             <!-- !CONTACTO APP -->
